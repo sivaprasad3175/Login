@@ -18,7 +18,7 @@ const Login = ({ setUser }) => {
             navigate('/dashboard');
         } catch (error) {
             console.error('Login failed:', error);
-            alert('Login failed! Please check your credentials.');
+            alert('Login failed! Please check your credentials.',JSON.stringify({error}));
         }
     };
 
