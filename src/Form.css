@@ -1,0 +1,92 @@
+.form-container {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  color: #000; /* Change to black for contrast */
+  background-color: #f9f9f9; /* Optional: light background for form */
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Darker color for title */
+}
+
+.user-form {
+  background: #fff; /* White background for form */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  color: #333; /* Dark color for labels */
+  font-weight: bold; /* Make labels bold */
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #007BFF; /* Change border color on focus */
+}
+
+.submit-button {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.success-message {
+  text-align: center;
+  color: #28a745; /* Green color for success message */
+}
+
+.user-list-title {
+  margin-top: 20px;
+  color: #333; /* Dark color for user list title */
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Add spacing above the table */
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #007BFF; /* Blue background for headers */
+  color: #fff; /* White color for header text */
+}

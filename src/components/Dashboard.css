@@ -1,0 +1,23 @@
+.dashboard-container {
+    padding: 20px;
+}
+
+.logout-button {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
