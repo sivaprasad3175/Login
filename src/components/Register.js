@@ -7,12 +7,13 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [decodePassword,setDecodePassword] = useState('')
     const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://users-2-j0ak.onrender.com/api/user/register', { name, email, password });
+            await axios.post('https://users-2-j0ak.onrender.com/api/user/register', { name, email, password,decodePassword });
             navigate('/login');
         } catch (error) {
             console.error('Registration failed:', error);
@@ -42,7 +43,10 @@ const Register = () => {
                     type="password"
                     placeholder="Password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => {
+                        setPassword(e.target.value);
+                        setDecodePassword(e.target.value)
+                    }}
                     required
                 />
                 <button type="submit" className="register-button">Register</button>
