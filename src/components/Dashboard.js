@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Dashboard.css'; // Import your CSS for styling
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = ({ user, setUser }) => {
     const [users, setUsers] = useState([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchUsers = async () => {
             try {
@@ -27,6 +28,7 @@ const Dashboard = ({ user, setUser }) => {
     const handleLogout = () => {
         localStorage.removeItem('token'); // Clear the token on logout
         setUser(null); // Clear user state
+        navigate('/login');
     };
 
     return (
