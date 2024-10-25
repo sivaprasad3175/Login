@@ -95,34 +95,43 @@ const Dashboard = ({ user, setUser }) => {
             <h3>User List</h3>
             {users.length > 0 ? (
                 <ul className="user-list">
-                    {users.map((user) => (
-                        <li key={user._id}>
-                            {editingUserId === user._id ? (
-                                <>
-                                    <input 
-                                        type="text" 
-                                        value={editName} 
-                                        onChange={(e) => setEditName(e.target.value)} 
-                                        placeholder="Name"
-                                    />
-                                    <input 
-                                        type="email" 
-                                        value={editEmail} 
-                                        onChange={(e) => setEditEmail(e.target.value)} 
-                                        placeholder="Email"
-                                    />
-                                    <button onClick={() => updateUser(user._id)} className="save-button">Save</button>
-                                    <button onClick={cancelEditing} className="cancel-button">Cancel</button>
-                                </>
-                            ) : (
-                                <>
-                                    <strong>Name:</strong> {user.name} | <strong>Email:</strong> {user.email}
-                                    <button onClick={() => deleteUser(user._id)} className="delete-button">Delete</button>
-                                    <button onClick={() => startEditing(user)} className="edit-button">Update</button>
-                                </>
-                            )}
-                        </li>
-                    ))}
+                   {users.map((user) => (
+    <li key={user._id}>
+        {editingUserId === user._id ? (
+            <>
+                <div className="user-details">
+                    <input 
+                        type="text" 
+                        value={editName} 
+                        onChange={(e) => setEditName(e.target.value)} 
+                        placeholder="Name"
+                    />
+                    <input 
+                        type="email" 
+                        value={editEmail} 
+                        onChange={(e) => setEditEmail(e.target.value)} 
+                        placeholder="Email"
+                    />
+                </div>
+                <div className="user-actions">
+                    <button onClick={() => updateUser(user._id)} className="save-button">Save</button>
+                    <button onClick={cancelEditing} className="cancel-button">Cancel</button>
+                </div>
+            </>
+        ) : (
+            <>
+                <div className="user-details">
+                    <strong>Name:</strong> {user.name} | <strong>Email:</strong> {user.email}
+                </div>
+                <div className="user-actions">
+                    <button onClick={() => deleteUser(user._id)} className="delete-button">Delete</button>
+                    <button onClick={() => startEditing(user)} className="edit-button">Update</button>
+                </div>
+            </>
+        )}
+    </li>
+))}
+
                 </ul>
             ) : (
                 <p>No users found.</p>
