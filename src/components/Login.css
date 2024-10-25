@@ -1,50 +1,100 @@
-/* Login.css */
-
-.login-container {
+/* Fullscreen background */
+.login-background {
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full height of the viewport */
-    background-color: #f0f0f0; /* Light background color */
-    padding: 20px;
 }
 
+/* Centered login container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Title styling */
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form styling */
 .login-form {
     display: flex;
     flex-direction: column;
-    width: 300px; /* Fixed width for the form */
+    gap: 15px;
 }
 
-.login-form input {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Increase font size */
+/* Input fields styling */
+.login-input {
+    padding: 12px 40px; /* Extra padding for the icon */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    position: relative; /* For absolute positioning of the icon */
 }
 
+/* Styling for input icons */
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; /* Icon color */
+}
+
+/* Input focus effect */
+.login-input:focus {
+    border-color: #007bff;
+}
+
+/* Common button styles */
+button {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Login button styling */
 .login-button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px;
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Increase font size */
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
 }
 
 .login-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
+/* Register button styling */
 .register-button {
-    background-color: transparent; /* No background */
-    color: #007bff; /* Blue color */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor */
+    background: none;
+    color: #007bff;
+    border: none;
+    text-decoration: underline;
 }
 
 .register-button:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Register prompt styling */
+.register-prompt {
+    margin-top: 15px;
+    font-size: 14px;
 }
