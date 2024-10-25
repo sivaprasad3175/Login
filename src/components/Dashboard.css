@@ -1,23 +1,118 @@
+/* General dashboard container styling */
 .dashboard-container {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logout-button {
+/* Title styling */
+h2 {
+    color: #333;
     margin-bottom: 20px;
-    padding: 10px 15px;
-    background-color: #f44336;
+}
+
+/* Logout button styling */
+.logout-button {
+    background-color: #d9534f;
     color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* User list and item styling */
 .user-list {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .user-list li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 10px;
-    border: 1px solid #ccc;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Editable input fields */
+.user-list li input[type="text"],
+.user-list li input[type="email"] {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 14px;
+    width: 120px;
+}
+
+.user-list li input[type="text"]:focus,
+.user-list li input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.delete-button {
+    background-color: #d9534f;
+    color: white;
+    margin-right: 5px;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
+.edit-button {
+    background-color: #5bc0de;
+    color: white;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #31b0d5;
+}
+
+.save-button {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #449d44;
+}
+
+.cancel-button {
+    background-color: #f0ad4e;
+    color: white;
+    margin-left: 5px;
+}
+
+.cancel-button:hover {
+    background-color: #ec971f;
 }
