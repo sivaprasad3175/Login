@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { LockIcon, PersonIcon, SignInIcon } from '@primer/octicons-react'; // Importing icons from Octicons
+import { LockIcon, PersonIcon, SignInIcon } from '@primer/octicons-react';
 import './Login.css';
 
 const Login = ({ setUser }) => {
@@ -65,8 +65,16 @@ const Login = ({ setUser }) => {
                             Register
                         </button>
                     </p>
+                     {/* Hyperlink in the corner */}
+                     <p className="register-prompt">
+                        api documentation click here
+            <a href="https://users-2-j0ak.onrender.com/api-docs/" className="corner-link">
+                Click Here
+            </a>
+            </p>
                 </form>
             </div>
+           
         </div>
     );
 };
